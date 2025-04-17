@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    .input {
+        display: block;
+        width: 80%;
+        margin: 20px auto;
+        height: 33px;
+        border-radius: 5px;
+        border: 1px solid;
+        padding-left: 10px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .button {
+        padding: 7px 10px;
+        border-radius: 5px;
+        background-color: #008eff;
+        color: white;
+        border-color: #008eff;
+    }
+
+    .container {
+        font-size: 1.8em;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h1>Calculator</h1>
+    <input type="number" id="first" class="input" placeholder="Enter first number">
+    <input type="number" id="second" class="input" placeholder="Enter second number">
+    <div class="buttons">
+        <button id="add" class="button" onclick="myAdd()">Add</button>
+        <button id="sub" class="button" onclick="mySub()">Sub</button>
+        <button id="mul" class="button" onclick="myMul()">Mul</button>
+        <button id="div" class="button" onclick="myDiv()">Div</button>
+    </div>
+
+    <div class="container" id="result">
+        Result:
+    </div>
+
+
+    <script>
+        function myAdd() {
+            let first = Number(document.getElementById("first").value);
+            let second = Number(document.getElementById("second").value);
+            let z = first + second;
+            z = z.toFixed(2);
+            console.log(first);
+            console.log(second);
+            console.log(z);
+            let result = document.getElementById("result");
+            result.innerText = `Result: ${z}`;
+        }
+        function mySub() {
+            let first = Number(document.getElementById("first").value);
+            let second = Number(document.getElementById("second").value);
+            let z = first - second;
+            z = z.toFixed(2);
+            console.log(first);
+            console.log(second);
+            console.log(z);
+            let result = document.getElementById("result");
+            result.innerText = `Result: ${z}`;
+        }
+        function myMul() {
+            let first = Number(document.getElementById("first").value);
+            let second = Number(document.getElementById("second").value);
+            let z = first * second;
+            z = z.toFixed(2);
+            console.log(first);
+            console.log(second);
+            console.log(z);
+            let result = document.getElementById("result");
+            result.innerText = `Result: ${z}`;
+        }
+        function myDiv() {
+            let first = Number(document.getElementById("first").value);
+            let second = Number(document.getElementById("second").value);
+            let z = first / second;
+            z = z.toFixed(2);
+            console.log(first);
+            console.log(second);
+            console.log(z);
+            let result = document.getElementById("result");
+            result.innerText = `Result: ${z}`;
+        }
+    </script>
+
+</body>
+
+</html>
